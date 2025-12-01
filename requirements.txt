@@ -1,6 +1,0 @@
-flask
-numpy<2
-pandas
-scikit-learn==1.7.1
-joblib
-torch==2.1.0
