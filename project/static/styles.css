@@ -1,0 +1,202 @@
+/* GLOBAL FIX */
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;   /* 👈 evita scroll lateral */
+    font-family: 'Inter', sans-serif;
+    background: #f5f5f7;
+}
+
+/* HERO SECTION */
+.hero {
+    height: 100vh;
+    width: 100%;
+    background: linear-gradient(90deg, #FF3C00, #E24A6F, #C36ADB);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding: 0 20px;
+}
+
+/* Powered by AI badge */
+.badge {
+    background: rgba(255,255,255,0.2);
+    padding: 12px 28px;
+    border-radius: 40px;
+    font-size: 20px;
+    margin-bottom: 40px;
+    border: 1px solid rgba(255,255,255,0.3);
+    backdrop-filter: blur(4px);
+}
+
+.title {
+    font-size: 70px;
+    font-weight: 900;
+    margin: 0;
+}
+
+.subtitle {
+    font-size: 70px;
+    font-weight: 900;
+    margin: 0;
+}
+
+.description {
+    margin-top: 35px;
+    font-size: 24px;
+    max-width: 900px;
+}
+
+/* RESPONSIVE HERO TEXT */
+@media (max-width: 900px) {
+    .title, .subtitle {
+        font-size: 48px;
+    }
+    .description {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 600px) {
+    .title, .subtitle {
+        font-size: 38px;
+    }
+    .badge {
+        font-size: 16px;
+        padding: 10px 20px;
+    }
+}
+
+/* MAIN DASHBOARD LAYOUT */
+.container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin: 50px auto 80px auto;   
+    width: 100%;
+    max-width: 1200px;             
+    padding: 0 20px;               
+}
+
+/* CARDS */
+.card {
+    background: white;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    width: 100%;
+}
+
+/* LEFT SIDEBAR FORM */
+.form-card {
+    max-width: 350px;   /* 👈 responsivo sin romper layout */
+}
+
+/* RIGHT CONTENT COLUMN */
+.right-column {
+    max-width: 550px;   
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+/* FORM FIELDS */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+label {
+    font-weight: 600;
+}
+
+input, select {
+    padding: 14px;
+    font-size: 15px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    outline: none;
+    width: 100%;
+}
+
+input:focus, select:focus {
+    border-color: #ff4f00;
+}
+
+/* BUTTON */
+.predict-btn {
+    background: #ff4f00;
+    color: white;
+    padding: 15px;
+    font-size: 16px;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    margin-top: 10px;
+    font-weight: 600;
+}
+
+.predict-btn:hover {
+    background: #d64200;
+}
+
+/* PREDICTION NUMBER */
+.calories-number {
+    font-size: 85px;
+    font-weight: 900;
+    color: #ff4f00;
+    margin: 0;
+}
+
+.kcal {
+    font-size: 20px;
+    opacity: 0.8;
+}
+
+/* CONFIDENCE BAR */
+.bar-container {
+    width: 100%;
+    height: 15px;
+    background: #eee;
+    border-radius: 10px;
+    margin-top: 15px;
+}
+
+.bar-fill {
+    height: 100%;
+    background: #0cc56d;
+    border-radius: 10px;
+}
+
+/* TIPS SECTION */
+ul {
+    padding-left: 20px;
+}
+
+.tips-card li {
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+/* MOBILE RESPONSIVE FOR COLUMNS */
+@media (max-width: 900px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.bar-fill {
+    transition: width 1s ease;
+}
